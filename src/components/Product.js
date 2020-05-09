@@ -1,13 +1,9 @@
 import React from 'react';
-import logo from "../logo.svg";
 import 'typeface-roboto';
 import {makeStyles} from '@material-ui/core/styles';
-import Typography from "@material-ui/core/Typography";
 
 import ListSubheader from '@material-ui/core/ListSubheader';
 import '../index.css'
-
-import Grid from "@material-ui/core/Grid";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
@@ -21,11 +17,11 @@ const useStyles = makeStyles((theme) => ({
         flexWrap: 'wrap',
         justifyContent: 'space-around',
         overflow: 'hidden',
-        backgroundColor: theme.palette.background.paper,
+        backgroundColor: theme.backgroundColor,
     },
     gridList: {
-        width: 900,
-        height: 850,
+        width: 'auto',
+        height: 'auto',
     },
     icon: {
         color: 'rgba(255, 255, 255, 0.54)',
@@ -41,9 +37,11 @@ export default function ProductPage() {
 
     return (
         <div className={classes.root} style={productStyles}>
-            <GridList cellHeight={180} className={classes.gridList}>
+            <GridList cellHeight={500} className={classes.gridList}>
                 <GridListTile key={"Subheader"} cols={2} style={{height: 'auto'}}>
-                    <ListSubheader component={"div"}>Product</ListSubheader>
+                    <ListSubheader component={"div"}>
+                        Computers
+                    </ListSubheader>
                 </GridListTile>
                 {productData.map((tile) => (
                     <GridListTile key={tile.img}>
