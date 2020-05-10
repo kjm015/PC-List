@@ -13,7 +13,9 @@ const productData = [
             cooler: 'Cooler Master MasterLiquid ML360R'
         },
         images: [
-            '/static/glowbox.jpg'
+            '/static/glowbox.jpg',
+            '/static/glowbox2.jpg',
+            '/static/glowbox3.jpg'
         ]
     },
     {
@@ -85,6 +87,10 @@ const productData = [
         },
         images: [
             '/static/projectbox.jpg',
+            '/static/project-box4.jpg',
+            '/static/project-box3.jpg',
+            '/static/project-box2.jpg',
+            '/static/project-box5.jpg',
             '/static/evga-sc-ultra.jpg'
         ]
     },
@@ -139,6 +145,7 @@ const productData = [
         },
         images: [
             '/static/windbox.jpg',
+            '/static/windbox2.jpg',
             '/static/evga-sc-ultra.jpg'
         ]
     },
