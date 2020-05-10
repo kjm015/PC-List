@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import Product from "./components/Product";
+import Product from "./components/ProductList";
 
 const stuff = (
     <React.StrictMode>
