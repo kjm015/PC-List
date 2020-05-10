@@ -32,7 +32,8 @@ const productData = [
             cooler: 'Arctic Freezer 34 CO'
         },
         images: [
-            '/static/minibox.jpg'
+            '/static/minibox.jpg',
+            '/static/minibox2.jpg'
         ]
     },
     {
@@ -68,8 +69,9 @@ const productData = [
             cooler: 'be quiet! Dark Rock Slim'
         },
         images: [
-            '/static/jossbox.jpg',
-            '/static/jossbox2.jpg'
+            '/static/jossbox2.jpg',
+            '/static/jossbox3.jpg',
+            '/static/jossbox.jpg'
         ]
     },
     {
@@ -91,7 +93,8 @@ const productData = [
             '/static/project-box3.jpg',
             '/static/project-box2.jpg',
             '/static/project-box5.jpg',
-            '/static/evga-sc-ultra.jpg'
+            '/static/evga-sc-ultra.jpg',
+            '/static/project-box6.jpg'
         ]
     },
     {
@@ -109,7 +112,9 @@ const productData = [
         },
         images: [
             '/static/icebox.jpg',
-            '/static/icebox2.jpg'
+            '/static/icebox2.jpg',
+            '/static/icebox3.jpg',
+            '/static/icebox4.jpg'
         ]
     },
     {
@@ -164,7 +169,8 @@ const productData = [
             cooler: 'Corsair H100i Platinum RGB'
         },
         images: [
-            '/static/jeremypc2.jpg'
+            '/static/jeremypc2.jpg',
+            '/static/jeremypc.jpg'
         ]
     },
     {
