@@ -62,7 +62,7 @@ const productData = [
         featured: true,
         specs: {
             cpu: 'AMD Ryzen 5 3600X',
-            gpu: 'Asus ROG Strix GTX 1070 Gaming',
+            gpu: 'Asus ROG Strix GTX 1070 Gaming OC',
             motherboard: 'Gigabyte B450 Aorus Elite',
             ram: '2x G.Skill Ripjaws V 8GB DDR4-3200',
             case: 'Cooler Master MasterCase H500',
