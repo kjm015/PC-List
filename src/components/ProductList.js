@@ -20,6 +20,9 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItem from '@material-ui/core/ListItem';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
+import Card from "@material-ui/core/Card";
+import CardMedia from "@material-ui/core/CardMedia";
+import {sizing} from '@material-ui/system';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -42,6 +45,15 @@ const useStyles = makeStyles((theme) => ({
     title: {
         marginLeft: theme.spacing(2),
         flex: 1
+    },
+    dialog: {
+        alignContent: "center"
+    },
+    card: {
+        maxWidth: "100%"
+    },
+    media: {
+        height: 1080
     }
 }));
 
@@ -54,11 +66,10 @@ const productStyles = {
 }
 
 const defaultBuild = {
-    img: '/static/glowbox.jpg',
-    title: 'The Glow Box',
-    owner: 'Arjun Sud',
+    title: 'PC',
+    owner: 'Someone',
     cols: 1,
-    featured: true,
+    featured: false,
     specs: {
         cpu: 'unknown',
         gpu: 'unknown',
@@ -66,7 +77,10 @@ const defaultBuild = {
         ram: 'unknown',
         cooler: 'unknown',
         case: 'unknown'
-    }
+    },
+    images: [
+        'logo512.png'
+    ]
 }
 
 export default function ProductPage() {
@@ -92,8 +106,8 @@ export default function ProductPage() {
                     </ListSubheader>
                 </GridListTile>
                 {productData.map((tile) => (
-                    <GridListTile key={tile.img}>
-                        <img src={tile.img} alt={tile.title}/>
+                    <GridListTile key={tile.images[0]}>
+                        <img src={tile.images[0]} alt={tile.title}/>
                         <GridListTileBar
                             title={tile.title}
                             subtitle={<span>Owner: {tile.owner}</span>}
@@ -119,7 +133,7 @@ export default function ProductPage() {
                         </IconButton>
                         <Typography variant="h5" className={classes.title}>
                             System Specifications
-                            for {currentBuild.owner}{currentBuild.owner[currentBuild.owner.length - 1] === 's' ? "'" : "'s"} {currentBuild.title}
+                            for {currentBuild.owner}{currentBuild.owner[currentBuild.owner.length - 1] === 's' ? "'" : "'s"} "{currentBuild.title}"
                         </Typography>
                     </Toolbar>
                 </AppBar>
@@ -148,7 +162,17 @@ export default function ProductPage() {
                         <ListItemText primary="Case" secondary={currentBuild.specs.case}/>
                     </ListItem>
                     <Divider/>
-                    <img src={currentBuild.img} alt={currentBuild.title}/>
+
+                    <Card className={classes.card}>
+                        {currentBuild.images.map(image => {
+                            return (
+                                <div>
+                                    <CardMedia className={classes.media} image={image} title={currentBuild.title}/>
+                                    <Divider/>
+                                </div>
+                            )
+                        })}
+                    </Card>
                 </List>
             </Dialog>
         </div>
