@@ -7,7 +7,11 @@ const productData = [
         featured: true,
         specs: {
             cpu: 'AMD Ryzen 9 3950X',
-            gpu: 'Nvidia GeForce RTX 2080 Super'
+            gpu: 'Nvidia GeForce RTX 2080 Super',
+            motherboard: 'Asus TUF Gaming X570-Plus WiFi',
+            ram: '2x G.Skill TridentZ RGB 8GB DDR4-3200',
+            case: 'Lian Li O11 Dynamic',
+            cooler: 'Cooler Master MasterLiquid ML360R'
         }
     },
     {
@@ -18,7 +22,11 @@ const productData = [
         featured: true,
         specs: {
             cpu: 'AMD Ryzen 7 2700X',
-            gpu: 'AMD Radeon RX 5600 XT'
+            gpu: 'AMD Radeon RX 5600 XT',
+            motherboard: 'Asus ROG Strix B450-I Gaming',
+            ram: '2x Crucial Ballistix Sport LT 8GB DDR4-3200',
+            case: 'NZXT H210',
+            cooler: 'Arctic Freezer 34 CO'
         }
     },
     {
@@ -29,7 +37,11 @@ const productData = [
         featured: true,
         specs: {
             cpu: 'AMD Ryzen 5 3600X',
-            gpu: 'Nvidia GeForce RTX 2080 Super'
+            gpu: 'Nvidia GeForce RTX 2080 Super',
+            motherboard: 'Gigabyte X570 Aorus Elite WiFi',
+            ram: '2x G.Skill Ripjaws V 8GB DDR4-3600',
+            case: 'Fractal Design Meshify C',
+            cooler: 'NZXT Kraken X63'
         }
     },
     {
@@ -40,7 +52,11 @@ const productData = [
         featured: true,
         specs: {
             cpu: 'AMD Ryzen 5 3600X',
-            gpu: 'Nvidia GeForce GTX 1070'
+            gpu: 'Nvidia GeForce GTX 1070',
+            motherboard: 'Gigabyte B450 Aorus Elite',
+            ram: '2x G.Skill Ripjaws V 8GB DDR4-3200',
+            case: 'Cooler Master MasterCase H500',
+            cooler: 'be quiet! Dark Rock Slim'
         }
     },
     {
@@ -51,7 +67,11 @@ const productData = [
         featured: false,
         specs: {
             cpu: 'AMD Ryzen 5 1600',
-            gpu: 'Nvidia GeForce RTX 2060'
+            gpu: 'EVGA RTX 2060 KO Ultra Gaming',
+            motherboard: 'Asus ROG Strix B450-F Gaming',
+            ram: '2x Crucial Ballistix Sport LT 8GB DDR4-3200',
+            case: 'NZXT H510',
+            cooler: 'Cooler Master Wraith Prism'
         }
     },
     {
@@ -62,7 +82,11 @@ const productData = [
         featured: false,
         specs: {
             cpu: 'AMD Ryzen 9 3900X',
-            gpu: 'Nvidia GeForce RTX 2070 Super'
+            gpu: 'Nvidia GeForce RTX 2070 Super',
+            motherboard: 'Gigabyte X570 Aorus Elite',
+            ram: '2x Corsair Vengeance Pro RGB 16GB DDR4-3600',
+            case: 'Fractal Design Meshify C',
+            cooler: 'DEEPCOOL Castle 240EX'
         }
     },
     {
@@ -73,7 +97,11 @@ const productData = [
         featured: false,
         specs: {
             cpu: 'AMD Ryzen 7 2700X',
-            gpu: 'Nvidia GeForce GTX 1660 Super'
+            gpu: 'Nvidia GeForce GTX 1660 Super',
+            motherboard: 'MSI B450 Tomahawk MAX',
+            ram: '2x G.Skill Ripjaws V 8GB DDR4-3200',
+            case: 'NZXT H510',
+            cooler: 'Cooler Master Wraith Prism'
         }
     },
     {
@@ -84,7 +112,11 @@ const productData = [
         featured: false,
         specs: {
             cpu: 'AMD Ryzen 5 1600',
-            gpu: 'Nvidia GeForce GTX 1660 Super'
+            gpu: 'Nvidia GeForce GTX 1660 Super',
+            motherboard: 'MSI B450 Tomahawk',
+            ram: '2x G.Skill Ripjaws V 8GB DDR4-3200',
+            case: 'Phanteks Eclipse P300A',
+            cooler: 'Cooler Master Wraith Spire'
         }
     },
     {
@@ -95,7 +127,11 @@ const productData = [
         featured: false,
         specs: {
             cpu: 'Intel Core i9-9900K',
-            gpu: 'Nvidia GeForce RTX 2080'
+            gpu: 'Nvidia GeForce RTX 2080',
+            motherboard: 'Asus PRIME Z390-A',
+            ram: '2x Corsair Vengeance Pro RGB 8GB DDR4-3200',
+            case: 'Thermaltake View 31',
+            cooler: 'Corsair H100i Platinum RGB'
         }
     },
     {
@@ -106,7 +142,11 @@ const productData = [
         featured: false,
         specs: {
             cpu: 'AMD FX-8350',
-            gpu: 'Nvidia GeForce GTX 1650 Super'
+            gpu: 'Nvidia GeForce GTX 1650 Super',
+            motherboard: 'MSI 970 Gaming',
+            ram: '4x G.Skill Ripjaws IV 4GB DDR3-1600',
+            case: 'Thermaltake Commander G41',
+            cooler: 'Cooler Master Wraith Max'
         }
     }
 ];

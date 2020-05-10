@@ -16,7 +16,10 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItem from '@material-ui/core/ListItem';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -50,11 +53,27 @@ const productStyles = {
     textAlign: 'center'
 }
 
+const defaultBuild = {
+    img: '/static/glowbox.jpg',
+    title: 'The Glow Box',
+    owner: 'Arjun Sud',
+    cols: 1,
+    featured: true,
+    specs: {
+        cpu: 'unknown',
+        gpu: 'unknown',
+        motherboard: 'unknown',
+        ram: 'unknown',
+        cooler: 'unknown',
+        case: 'unknown'
+    }
+}
+
 export default function ProductPage() {
     const classes = useStyles();
 
     const [open, setOpen] = React.useState(false);
-    const [specs, changeSpecs] = React.useState({cpu: 'unknown', gpu: 'unknown'});
+    const [currentBuild, changeCurrentBuild] = React.useState(defaultBuild);
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -81,7 +100,7 @@ export default function ProductPage() {
                             actionIcon={
                                 <IconButton aria-label={`info about ${tile.title}`} className={classes.icon}
                                             onClick={() => {
-                                                changeSpecs(tile.specs)
+                                                changeCurrentBuild(tile)
                                                 handleClickOpen();
                                             }}>
                                     <InfoIcon/>
@@ -96,13 +115,41 @@ export default function ProductPage() {
                 <AppBar className={classes.appBar}>
                     <Toolbar>
                         <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
-                            <CloseIcon />
+                            <CloseIcon/>
                         </IconButton>
-                        <Typography variant="h6" className={classes.title}>
+                        <Typography variant="h5" className={classes.title}>
                             System Specifications
+                            for {currentBuild.owner}{currentBuild.owner[currentBuild.owner.length - 1] === 's' ? "'" : "'s"} {currentBuild.title}
                         </Typography>
                     </Toolbar>
                 </AppBar>
+                <List>
+                    <ListItem>
+                        <ListItemText primary="CPU" secondary={currentBuild.specs.gpu}/>
+                    </ListItem>
+                    <Divider/>
+                    <ListItem>
+                        <ListItemText primary="GPU" secondary={currentBuild.specs.gpu}/>
+                    </ListItem>
+                    <Divider/>
+                    <ListItem>
+                        <ListItemText primary="Motherboard" secondary={currentBuild.specs.motherboard}/>
+                    </ListItem>
+                    <Divider/>
+                    <ListItem>
+                        <ListItemText primary="CPU Cooler" secondary={currentBuild.specs.cooler}/>
+                    </ListItem>
+                    <Divider/>
+                    <ListItem>
+                        <ListItemText primary="RAM Configuration" secondary={currentBuild.specs.ram}/>
+                    </ListItem>
+                    <Divider/>
+                    <ListItem>
+                        <ListItemText primary="Case" secondary={currentBuild.specs.case}/>
+                    </ListItem>
+                    <Divider/>
+                    <img src={currentBuild.img} alt={currentBuild.title}/>
+                </List>
             </Dialog>
         </div>
     );
