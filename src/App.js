@@ -1,22 +1,39 @@
 import React from 'react';
 import './App.css';
 
+import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
+import ProductPage from "./components/ProductPage";
+import HomePage from "./components/HomePage";
+
+import Typography from "@material-ui/core/Typography";
+
 function App() {
     return (
-        <div className="App">
-            <header className="App-header">
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
+        <div>
+            <Router>
+                <div>
+                    <nav>
+                        <Link to="/">
+                            <Typography variant={'h5'} component={'h5'}>
+                                Home
+                            </Typography>
+                        </Link>
+                        <Link to="/gallery">
+                            <Typography variant={'h5'} component={'h5'}>
+                                Product Gallery
+                            </Typography>
+                        </Link>
+                    </nav>
+                    <Switch>
+                        <Route path="/gallery">
+                            <ProductPage/>
+                        </Route>
+                        <Route path="/">
+                            <HomePage/>
+                        </Route>
+                    </Switch>
+                </div>
+            </Router>
         </div>
     );
 }

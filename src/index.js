@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import Product from "./components/ProductList";
+import App from "./App";
 
 const stuff = (
     <React.StrictMode>
-        <Product/>
+        <App/>
     </React.StrictMode>
 );
 
