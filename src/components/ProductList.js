@@ -22,7 +22,7 @@ import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
-import {sizing} from '@material-ui/system';
+import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -31,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'space-around',
         overflow: 'hidden',
         backgroundColor: theme.backgroundColor,
+    },
+    grid: {
+        flexGrow: 1
     },
     gridList: {
         width: 'auto',
@@ -53,7 +56,11 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: "100%"
     },
     media: {
-        height: 1080
+        height: "100%"
+    },
+    image: {
+        maxWidth: "100%",
+        maxHeight: "100%"
     }
 }));
 
@@ -164,14 +171,20 @@ export default function ProductPage() {
                     <Divider/>
 
                     <Card className={classes.card}>
-                        {currentBuild.images.map(image => {
-                            return (
-                                <div>
-                                    <CardMedia className={classes.media} image={image} title={currentBuild.title}/>
-                                    <Divider/>
-                                </div>
-                            )
-                        })}
+                        <div>
+                            <CardMedia className={classes.media} title={currentBuild.title}>
+                                <Grid container spacing={1} justify={'center'}
+                                      className={classes.grid}>
+                                    {currentBuild.images.map(image => {
+                                        return (
+                                            <Grid item xs={6}>
+                                                <img src={image} alt={"?"} className={classes.image}/>
+                                            </Grid>
+                                        )
+                                    })}
+                                </Grid>
+                            </CardMedia>
+                        </div>
                     </Card>
                 </List>
             </Dialog>
