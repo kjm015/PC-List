@@ -125,7 +125,7 @@ export default function ProductPage() {
                 </AppBar>
                 <List>
                     <ListItem>
-                        <ListItemText primary="CPU" secondary={currentBuild.specs.gpu}/>
+                        <ListItemText primary="CPU" secondary={currentBuild.specs.cpu}/>
                     </ListItem>
                     <Divider/>
                     <ListItem>
