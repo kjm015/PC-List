@@ -8,8 +8,8 @@ const productData = [
             cpu: 'AMD Ryzen 9 3950X',
             gpu: "Nvidia Founder's Edition RTX 2080 Super",
             motherboard: 'Asus TUF Gaming X570-Plus WiFi',
-            ram: '2x G.Skill TridentZ RGB 8GB DDR4-3200',
-            case: 'Lian Li O11 Dynamic',
+            ram: '2x G.Skill TridentZ RGB 16GB DDR4-3200',
+            case: 'Lian Li PC-O11 Dynamic',
             cooler: 'Cooler Master MasterLiquid ML360R'
         },
         images: [
@@ -190,6 +190,25 @@ const productData = [
         images: [
             '/static/joshbox.jpg',
             '/static/joshbox2.jpg'
+        ]
+    },
+    {
+        img: '/static/cbox3.jpg',
+        title: 'Flex Box',
+        owner: 'Harry Chieng',
+        cols: 1,
+        featured: false,
+        specs: {
+            cpu: 'Intel Core i7-7700K',
+            gpu: 'Asus ROG Strix GTX 1060-6GB Gaming OC',
+            motherboard: 'Asus TUF Z270 Mark 2',
+            ram: '4x Corsair Vengeance Pro RGB 8GB DDR4-2666',
+            case: 'Lian Li PC-O11 Dynamic',
+            cooler: 'Corsair H100i Platinum RGB'
+        },
+        images: [
+            '/static/cbox3.jpg',
+            '/static/cbox2.jpg'
         ]
     }
 ];
