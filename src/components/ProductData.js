@@ -1,7 +1,7 @@
 const productData = [
     {
         title: 'The Glow Box',
-        owner: 'Arjun Sud',
+        owner: 'Arjun S.',
         cols: 1,
         featured: true,
         specs: {
@@ -20,7 +20,7 @@ const productData = [
     },
     {
         title: 'The Ice Cube',
-        owner: 'Kevin Miyata',
+        owner: 'Kevin M.',
         cols: 1,
         featured: true,
         specs: {
@@ -38,7 +38,7 @@ const productData = [
     },
     {
         title: 'The Zheng Box',
-        owner: 'Kevin Zheng',
+        owner: 'Kevin Z.',
         cols: 1,
         featured: true,
         specs: {
@@ -57,7 +57,7 @@ const productData = [
     {
         img: '/static/jossbox.jpg',
         title: 'The Joss Box',
-        owner: 'Jess Miyata',
+        owner: 'Jess M.',
         cols: 1,
         featured: true,
         specs: {
@@ -76,7 +76,7 @@ const productData = [
     },
     {
         title: 'Project Box',
-        owner: 'Kevin Miyata',
+        owner: 'Kevin M.',
         cols: 1,
         featured: false,
         specs: {
@@ -99,7 +99,7 @@ const productData = [
     },
     {
         title: 'The Ice Box',
-        owner: 'Kevin Miyata',
+        owner: 'Kevin M.',
         cols: 1,
         featured: false,
         specs: {
@@ -119,7 +119,7 @@ const productData = [
     },
     {
         title: 'Siri Box',
-        owner: 'Lynn Kang',
+        owner: 'Lynn K.',
         cols: 1,
         featured: false,
         specs: {
@@ -137,7 +137,7 @@ const productData = [
     },
     {
         title: 'The Wind Box',
-        owner: 'Pawel Wota',
+        owner: 'Pawel W.',
         cols: 1,
         featured: false,
         specs: {
@@ -157,7 +157,7 @@ const productData = [
     {
         img: '/static/jeremypc2.jpg',
         title: 'Jeremy Box',
-        owner: 'Jeremy Nielson',
+        owner: 'Jeremy N.',
         cols: 1,
         featured: false,
         specs: {
@@ -176,7 +176,7 @@ const productData = [
     {
         img: '/static/joshbox.jpg',
         title: 'Josh Box',
-        owner: 'Josh Hayes',
+        owner: 'Josh H.',
         cols: 1,
         featured: false,
         specs: {
@@ -195,7 +195,7 @@ const productData = [
     {
         img: '/static/cbox3.jpg',
         title: 'Flex Box',
-        owner: 'Harry Chieng',
+        owner: 'Harry C.',
         cols: 1,
         featured: false,
         specs: {
