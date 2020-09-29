@@ -23,8 +23,11 @@
     "eject": "react-scripts eject"
   },
   "resolutions": {
-    "lodash": "4.17.19",
-    "elliptic": "6.5.3"
+    "lodash": "4.17.20",
+    "elliptic": "6.5.3",
+    "node-forge": "0.10.0",
+    "http-proxy": "1.18.1",
+    "serialize-javascript": "5.0.1"
   },
   "eslintConfig": {
     "extends": "react-app"
