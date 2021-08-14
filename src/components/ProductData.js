@@ -1,5 +1,45 @@
 const productData = [
     {
+        img: '/static/glowboxm_3.jpg',
+        title: 'Glowbox Micro',
+        owner: 'Cesar A.',
+        cols: 1,
+        featured: true,
+        specs: {
+            cpu: 'AMD Ryzen 7 2700X',
+            gpu: 'Gigabyte RTX 3060 Ti Gaming OC Pro',
+            motherboard: 'Gigabyte B450 Aorus M',
+            ram: '2x Crucial Ballistix 8 GB DDR4-3200',
+            case: 'Cooler Master MB311L',
+            cooler: 'Cooler Master Wraith Prism'
+        },
+        images: [
+            '/static/glowboxm_1.jpg',
+            '/static/glowboxm_3.jpg',
+            '/static/glowboxm_2.jpg'
+        ]
+    },
+    {
+        img: '/static/hotline.jpg',
+        title: 'Hotline',
+        owner: 'Emily P.',
+        cols: 1,
+        featured: true,
+        specs: {
+            cpu: 'AMD Ryzen 5 3600',
+            gpu: 'Gigabyte RTX 3060 Ti Gaming OC Pro',
+            motherboard: 'MSI B450 Tomahawk MAX',
+            ram: '2x Crucial Ballistix RGB 8 GB DDR4-3200',
+            case: 'Phanteks Eclipse P360A',
+            cooler: 'Corsair H100i Platinum RGB'
+        },
+        images: [
+            '/static/hotline.jpg',
+            '/static/hotline2.jpg',
+            '/static/hotline3.jpg'
+        ]
+    },
+    {
         title: 'The Glow Box',
         owner: 'Arjun S.',
         cols: 1,
@@ -75,12 +115,13 @@ const productData = [
         ]
     },
     {
-        title: 'Project Box',
-        owner: 'Kevin M.',
+        img: '/static/projectbox.jpg',
+        title: 'NeemDab Box',
+        owner: 'Neemesh G.',
         cols: 1,
         featured: false,
         specs: {
-            cpu: 'AMD Ryzen 5 1600',
+            cpu: 'AMD Ryzen 7 3700X',
             gpu: 'EVGA RTX 2060 KO Ultra Gaming',
             motherboard: 'Asus ROG Strix B450-F Gaming',
             ram: '2x Crucial Ballistix Sport LT 8GB DDR4-3200',
@@ -118,24 +159,6 @@ const productData = [
         ]
     },
     {
-        title: 'Siri Box',
-        owner: 'Lynn K.',
-        cols: 1,
-        featured: false,
-        specs: {
-            cpu: 'AMD Ryzen 7 2700X',
-            gpu: 'Zotac GTX 1660 Super Twin Fan',
-            motherboard: 'MSI B450 Tomahawk MAX',
-            ram: '2x G.Skill Ripjaws V 8GB DDR4-3200',
-            case: 'NZXT H510',
-            cooler: 'Cooler Master Wraith Prism'
-        },
-        images: [
-            '/static/siribox.jpg',
-            '/static/siri-box2.jpg'
-        ]
-    },
-    {
         title: 'The Wind Box',
         owner: 'Pawel W.',
         cols: 1,
@@ -152,44 +175,6 @@ const productData = [
             '/static/windbox.jpg',
             '/static/windbox2.jpg',
             '/static/evga-sc-ultra.jpg'
-        ]
-    },
-    {
-        img: '/static/jeremypc2.jpg',
-        title: 'Jeremy Box',
-        owner: 'Jeremy N.',
-        cols: 1,
-        featured: false,
-        specs: {
-            cpu: 'Intel Core i9-9900K',
-            gpu: 'EVGA RTX 2080 XC Ultra',
-            motherboard: 'Asus PRIME Z390-A',
-            ram: '2x Corsair Vengeance Pro RGB 8GB DDR4-3200',
-            case: 'Thermaltake View 31',
-            cooler: 'Corsair H100i Platinum RGB'
-        },
-        images: [
-            '/static/jeremypc2.jpg',
-            '/static/jeremypc.jpg'
-        ]
-    },
-    {
-        img: '/static/joshbox.jpg',
-        title: 'Josh Box',
-        owner: 'Josh H.',
-        cols: 1,
-        featured: false,
-        specs: {
-            cpu: 'AMD FX-8350',
-            gpu: 'MSI GTX 1650 Super Ventus XS OC',
-            motherboard: 'MSI 970 Gaming',
-            ram: '4x G.Skill Ripjaws IV 4GB DDR3-1600',
-            case: 'Thermaltake Commander G41',
-            cooler: 'Cooler Master Wraith Max'
-        },
-        images: [
-            '/static/joshbox.jpg',
-            '/static/joshbox2.jpg'
         ]
     },
     {

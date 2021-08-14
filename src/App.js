@@ -12,6 +12,14 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from '@material-ui/icons/Menu';
+import Drawer from '@material-ui/core/Drawer';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import List from '@material-ui/core/List';
+import {ChevronLeft} from "@material-ui/icons";
+import HomeIcon from '@material-ui/icons/Home'
+import PhotoAlbumIcon from '@material-ui/icons/PhotoAlbum';
 
 const useStyles = makeStyles((theme) => ({
     appBar: {
@@ -29,6 +37,11 @@ function App() {
     const classes = useStyles();
 
     const [pageTitle, setPageTitle] = React.useState("Home Page");
+    const [drawerOpen, setDrawerOpen] = React.useState(false);
+
+    const handleDrawer = () => {
+        drawerOpen ? setDrawerOpen(false) : setDrawerOpen(true);
+    };
 
     return (
         <div>
@@ -36,25 +49,57 @@ function App() {
                 <div>
                     <AppBar className={classes.appBar}>
                         <Toolbar variant={"dense"}>
-                            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                            <IconButton
+                                edge="start"
+                                className={classes.menuButton}
+                                color="inherit"
+                                aria-label="menu"
+                                onClick={handleDrawer}
+                            >
                                 <MenuIcon/>
                             </IconButton>
                             <Typography variant="h6" className={classes.title}>
                                 {pageTitle}
                             </Typography>
-
-                            <Link to="/">
-                                <Typography variant={'h5'} component={'h5'} >
-                                    Home
-                                </Typography>
-                            </Link>
-                            <Link to="/gallery" >
-                                <Typography variant={'h5'} component={'h5'}>
-                                    Product Gallery
-                                </Typography>
-                            </Link>
                         </Toolbar>
                     </AppBar>
+                    <Drawer
+                        className={classes.drawer}
+                        variant="persistent"
+                        anchor="left"
+                        open={drawerOpen}
+                        classes={{
+                            paper: classes.drawerPaper,
+                        }}
+                    >
+                        <div className={classes.drawerHeader}>
+                            <IconButton onClick={handleDrawer}>
+                                <ChevronLeft/>
+                                Close
+                            </IconButton>
+                        </div>
+                        <Divider/>
+
+
+                        <List>
+                            <Link to="/">
+                                <ListItem button key={"Home"}>
+                                    <ListItemIcon>
+                                        <HomeIcon/>
+                                    </ListItemIcon>
+                                    <ListItemText primary={"Home"}/>
+                                </ListItem>
+                            </Link>
+                            <Link to="/gallery">
+                                <ListItem button key={"Gallery"}>
+                                    <ListItemIcon>
+                                        <PhotoAlbumIcon/>
+                                    </ListItemIcon>
+                                    <ListItemText primary={"Gallery"}/>
+                                </ListItem>
+                            </Link>
+                        </List>
+                    </Drawer>
                     <Divider/>
                     <Switch>
                         <Route path="/gallery">
