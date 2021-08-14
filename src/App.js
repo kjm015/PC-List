@@ -30,6 +30,21 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         flexGrow: 1,
+    },
+    drawer: {
+        width: 240,
+        flexShrink: 0,
+    },
+    drawerPaper: {
+        width: 240,
+    },
+    drawerHeader: {
+        display: 'flex',
+        alignItems: 'center',
+        padding: theme.spacing(0, 1),
+        // necessary for content to be below app bar
+        ...theme.mixins.toolbar,
+        justifyContent: 'flex-start',
     }
 }));
 
@@ -75,11 +90,12 @@ function App() {
                         <div className={classes.drawerHeader}>
                             <IconButton onClick={handleDrawer}>
                                 <ChevronLeft/>
-                                Close
+                                <Typography>
+                                    Close
+                                </Typography>
                             </IconButton>
                         </div>
                         <Divider/>
-
 
                         <List>
                             <Link to="/">

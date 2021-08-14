@@ -27,7 +27,14 @@
     "elliptic": "6.5.3",
     "node-forge": "0.10.0",
     "http-proxy": "1.18.1",
-    "serialize-javascript": "5.0.1"
+    "serialize-javascript": "5.0.1",
+    "color-string": "1.6.0",
+    "postcss": "7.0.36",
+    "ws": "5.2.3",
+    "glob-parent": "5.1.2",
+    "path-parse": "1.0.7",
+    "merge-deep": "3.0.3",
+    "ssri": "7.1.1"
   },
   "eslintConfig": {
     "extends": "react-app"
